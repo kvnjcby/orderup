@@ -1,0 +1,22 @@
+{
+  "name": "orderup",
+  "homepage": "https://github.com/kvnjcby/orderup",
+  "authors": [
+    "Kevin Jacoby <kvnjcby@gmail.com>",
+    "Cameron McCullers <cameross@live.unc.edu>"
+  ],
+  "description": "",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1"
+  }
+}
