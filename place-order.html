@@ -34,25 +34,13 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Cook View <span class="sr-only">(current)</span></a></li>
-
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
+            <li><a href="index.html">Info</a></li>
+            <li class="active"><a href="place-order.html">Place Order <span class="sr-only">(current)</span></a></li>
+            <li><a href="view-orders.html">View Orders <span class="badge">24</span></a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Link</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Settings <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="#">Action</a></li>
                 <li><a href="#">Another action</a></li>
@@ -66,14 +54,27 @@
       </div><!-- /.container-fluid -->
     </nav>
 
-
     <div class="container-fluid">
       <div class="well">
-        <h1>Active Orders:</h1>
+        <h1>Place Order</h1>
+        <form class="form-horizontal">
+          <div class="form-group">
+            <label for="orderName" class="col-sm-2 control-label">Name for Order</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="orderName" placeholder="John Doe">
+            </div>
+          </div>
 
+          <div class="form-group">
+            <label for="searchFood" class="col-sm-2 control-label">Add Food</label>
+            <div class="col-sm-8">
+              <input type="search" class="form-control" name="searchFood" placeholder="Peanut butter and jelly">
+            </div>
+            <div class="col-sm-2">
+              <input class="btn btn-default" type="button" value="Search">
+            </div>
+          </div>
 
-          <h2>McCullers</h2>
-          <p><a href="#" class="btn btn-primary" role="button">Mark as ready for Pickup</a></p>
           <div class="container-fluid">
             <div class="row">
               <div class="col-sm-6 col-md-4">
@@ -82,6 +83,7 @@
                   <div class="caption">
                     <h3>Fried Chicken</h3>
                     <p>Chiken cooked to  perfection and tastily fried.</p>
+                    <p><a href="#" class="btn btn-primary" role="button">Add Item</a></p>
                   </div>
                 </div>
               </div>
@@ -91,6 +93,7 @@
                   <div class="caption">
                     <h3>Spaghetti</h3>
                     <p>A favorite of well-known actor Spaget.</p>
+                    <p><a href="#" class="btn btn-primary" role="button">Add Item</a></p>
                   </div>
                 </div>
               </div>
@@ -100,6 +103,7 @@
                   <div class="caption">
                     <h3>Pizza</h3>
                     <p>Comes in cheese and cheese flavor.</p>
+                    <p><a href="#" class="btn btn-primary" role="button">Add Item</a></p>
                   </div>
                 </div>
               </div>
@@ -109,46 +113,14 @@
                   <div class="caption">
                     <h3>Roast Beef</h3>
                     <p>Beefy!</p>
+                    <p><a href="#" class="btn btn-primary" role="button">Add Item</a></p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <h2>Jacoby</h2>
-          <p><a href="#" class="btn btn-primary" role="button">Mark as ready for Pickup</a></p>
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
-                  <img src="..." alt="...">
-                  <div class="caption">
-                    <h3>Fried Chicken</h3>
-                    <p>Chiken cooked to  perfection and tastily fried.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
-                  <img src="..." alt="...">
-                  <div class="caption">
-                    <h3>Spaghetti</h3>
-                    <p>A favorite of well-known actor Spaget.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
-                  <img src="..." alt="...">
-                  <div class="caption">
-                    <h3>Roast Beef</h3>
-                    <p>Beefy!</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
+        </form>
       </div>
     </div>
 
