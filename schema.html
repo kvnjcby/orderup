@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>2nd Milestone</title>
+  </head>
+  <body>
+    <div >
+      <h1>RESTful API</h1>
+      <ul>
+        <li><em>/createFood POST</em> Parameters: name, description, price, cookTime. Adds food to database.</li>
+        <li><em>/getFood GET</em> Parameters: id. Returns food matching id in JSON format.</li>
+        <li><em>/getFoods GET</em> Parameters: N/A. Returns all foods in JSON format.</li>
+        <li><em>/deleteFood DELETE</em> Parameters: id. Deletes food by id.</li>
+        <li><em>/createOrder POST</em> Parameters: customerName, orderStatus, foods. Foods parameter is a JSON list of food id's. Creates new order.</li>
+        <li><em>/getOrder GET</em> Parameters: id. Returns single order in JSON format.</li>
+        <li><em>/getOrders GET</em> Parameters: (optional)orderStatus. Returns all orders in JSON format.</li>
+        <li><em>/updateOrder PUT</em> Parameters: id, orderStatus. Updates the status of an order based on id.</li>
+        <li><em>/deleteOrder DELETE</em> Parameters: id. Deletes an order by id.</li>
+      </ul>
+    </div>
+  </body>
+</html>
