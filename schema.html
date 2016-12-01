@@ -5,16 +5,47 @@
     <title>2nd Milestone</title>
   </head>
   <body>
-    <div >
+    <div>
+      <h1>SQL Schema</h1>
+      <ul>
+        <li>
+          Table <em>Foods</em>
+          <ul>
+            <li>id (int primary key)</li>
+            <li>name (varchar)</li>
+            <li>description (varchar)</li>
+            <li>price (decimal(5,2))</li>
+            <li>cookTime (int)</li>
+          </ul>
+        </li>
+        <li>
+          Table <em>Orders</em>
+          <ul>
+            <li>id (int primary key)</li>
+            <li>customerName (varchar)</li>
+            <li>orderStatus (int)</li>
+          </ul>
+        </li>
+        <li>
+          Table <em>OrderedFoods</em>
+          <ul>
+            <li>id (int primary key)</li>
+            <li>foodID (int foreign key)</li>
+            <li>orderID (int foreign key)</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div>
       <h1>RESTful API</h1>
       <ul>
         <li><em>/createFood POST</em> Parameters: name, description, price, cookTime. Adds food to database.</li>
-        <li><em>/getFood GET</em> Parameters: id. Returns food matching id in JSON format.</li>
-        <li><em>/getFoods GET</em> Parameters: N/A. Returns all foods in JSON format.</li>
+        <li><em>/getFood GET</em> Parameters: id. Returns food matching id in JSON: {id, name, description, price, cookTime}</li>
+        <li><em>/getFoods GET</em> Parameters: N/A. Returns all foods in JSON format: [{id, name, description, price, cookTime}, ...]</li>
         <li><em>/deleteFood DELETE</em> Parameters: id. Deletes food by id.</li>
-        <li><em>/createOrder POST</em> Parameters: customerName, orderStatus, foods. Foods parameter is a JSON list of food id's. Creates new order.</li>
-        <li><em>/getOrder GET</em> Parameters: id. Returns single order in JSON format.</li>
-        <li><em>/getOrders GET</em> Parameters: (optional)orderStatus. Returns all orders in JSON format.</li>
+        <li><em>/createOrder POST</em> Parameters: customerName, orderStatus, foods. Foods parameter is an array of food ids [id, id, ...]. Creates new order.</li>
+        <li><em>/getOrder GET</em> Parameters: id. Returns single order in JSON: {id, customerName, orderStatus, [foodID, foodID, ...]}</li>
+        <li><em>/getOrders GET</em> Parameters: (optional)orderStatus. Returns all orders in JSON: [{id, customerName, orderStatus, [foodID, foodID, ...]}, ...].</li>
         <li><em>/updateOrder PUT</em> Parameters: id, orderStatus. Updates the status of an order based on id.</li>
         <li><em>/deleteOrder DELETE</em> Parameters: id. Deletes an order by id.</li>
       </ul>
